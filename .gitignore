@@ -1,4 +1,5 @@
 .DS_Store
+post.synctex.gz
 *.out
 *.aux
 *.bbl
