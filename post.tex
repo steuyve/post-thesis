@@ -50,7 +50,7 @@ Let $d$ be odd and $B_2^d$ be the closed $d$-dimensional Euclidean ball. Then
 \begin{equation}\label{eqn:partialres}
 \begin{aligned}
 &\frac{d^2}{dt^2}\text{Mag}(tB_2^d)\big\vert_{t=0} = \\
-&6\sum\limits_{\substack{2\leq p_2\leq m+1 \\ 0\leq q_1 \leq p_2-2 \\ 0\leq q_2 \leq m+1-p_2}}\frac{1}{2p_2-1}\left(\prod\limits_{k=2}^{q_1+2}\frac{(2k-2)}{(2k-1)}\right)\left(\prod\limits_{k=p_2+1}^{p_2+q_2}\frac{(2k-2)}{(2k-1)}\right) + \\
+&6\sum\limits_{\substack{2\leq p_2\leq m+1 \\ 0\leq q_1 \leq p_2-2 \\ 0\leq q_2 \leq m+1-p_2}}\frac{1}{2p_2-1}\left(\prod\limits_{k=2}^{q_1+1}\frac{(2k-2)}{(2k-1)}\right)\left(\prod\limits_{k=p_2+1}^{p_2+q_2}\frac{(2k-2)}{(2k-1)}\right) + \\
 &6\sum\limits_{\substack{2\leq p_1\leq m-1 \\ 0\leq q_1\leq m-1-p_1}}\frac{1}{2p_1-1}\left(\prod\limits_{k=p_1+1}^{p_1+q_1}\frac{(2k-2)}{(2k-1)}\right)\left(\frac{2m}{(2m-1)(2m+1)}\right) + \\
 &6\sum\limits_{\substack{2\leq p_1\leq m \\ 0\leq q_1\leq m-p_1}}\frac{1}{2p_1-1}\left(\prod\limits_{k=p_1+1}^{p_1+q_1}\frac{(2k-2)}{(2k-1)}\right)\left(\frac{1}{2m+1}\right) + \\
 &6\sum\limits_{\substack{2\leq p_1\leq m \\ p_1+1\leq p_2 \leq m-1 \\ 0\leq q_1\leq p_2-p_1-1 }}\frac{1}{2p_1-1}\left(\prod\limits_{k=p_1+1}^{p_1+q_1}\frac{(2k-2)}{(2k-1)}\right)\frac{1}{2p_2-1}\left(\prod\limits_{k=p_2+1}^{m+1}\frac{(2k-2)}{(2k-1)}\right) - \\
@@ -172,7 +172,7 @@ The first sum in (\ref{eqn:simplifiedlast2}) simplifies to:
 So putting (\ref{eqn:lastfirst}) and (\ref{eqn:lastsecond}) together we have
 \begin{equation}\label{eqn:lastsimp}
 \begin{aligned}
-V_1\sum\limits_{\substack{1\leq p \leq m -1 \\ 0 \leq q \leq m-1-p}}\frac{1}{2p+1}\prod\limits_{k=p+1}^{p+q}\left(\frac{2k}{2k+1}\right) = V_1\left(m+1 - \frac{2^{2m}[m!]^2}{(2m)!}\right).
+V_1\sum\limits_{\substack{1\leq p \leq m -1 \\ 0 \leq q \leq m-1-p}}\frac{1}{2p+1}\prod\limits_{k=p+1}^{p+q}\left(\frac{2k}{2k+1}\right) = V_1\left(m+1 - \frac{2^{2m}[m!]^2}{(2m)!}\right) = V_1\left(m+1-\frac{\sqrt{\pi}\Gamma(m+1)}{\Gamma\left(m+\frac{1}{2}\right)}\right).
 \end{aligned}
 \end{equation}
 
@@ -235,7 +235,7 @@ Then plugging in (\ref{eqn:thirdinnersum}) and (\ref{eqn:thirdoutersum}) into (\
 So we have that 
 \begin{equation}\label{eqn:thirdsimp}
 \begin{aligned}
-6\sum\limits_{\substack{2 \leq p \leq m \\ 0 \leq q \leq m - p}} \frac{1}{2p-1}\left(\prod\limits_{k=p+1}^{p+q}\frac{(2k-2)}{(2k-1)}\right)\left(\frac{1}{2m+1}\right) &= 6\frac{1}{2m+1}\left(m + 1 -\frac{\sqrt{\pi}\Gamma(m+1)}{\Gamma(m+\frac{1}{2})}\right).
+6\sum\limits_{\substack{2 \leq p \leq m \\ 0 \leq q \leq m - p}} \frac{1}{2p-1}\left(\prod\limits_{k=p+1}^{p+q}\frac{(2k-2)}{(2k-1)}\right)\left(\frac{1}{2m+1}\right) &= \frac{6}{2m+1}\left(m + 1 -\frac{\sqrt{\pi}\Gamma(m+1)}{\Gamma(m+\frac{1}{2})}\right).
 \end{aligned}
 \end{equation}
 
@@ -246,6 +246,17 @@ Applying the exact same process to the second sum in (\ref{eqn:partialres}), we 
 &\qquad = 6\left(\frac{2m}{(2m-1)(2m+1)}\right)\left(m-\frac{\sqrt{\pi}\Gamma(m)}{\Gamma(m-\frac{1}{2})}\right).
 \end{aligned}
 \end{equation}
+
+\subsection*{The first sum in (\ref{eqn:partialres})}
+
+We now simplify the first sum in (\ref{eqn:partialres}), that is, the sum
+\begin{equation}\label{eqn:first}
+\sum\limits_{p_2=2}^{m+1}\sum\limits_{q_1=0}^{p_2-2}\sum\limits_{q_2=0}^{m+1-p_2}\frac{1}{2p_2-1}\left(\prod\limits_{k=2}^{q_1+1}\frac{(2k-2)}{(2k-1)}\right)\left(\prod\limits_{k=p_2+1}^{p_2+q_2}\frac{(2k-2)}{(2k-1)}\right).
+\end{equation}
+
+First we use (\ref{eqn:Nskipfactsimp}) to simplify the products in the sum above:
+
+
 
 \pagebreak
 
