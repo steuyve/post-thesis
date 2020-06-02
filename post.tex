@@ -364,18 +364,18 @@ So the first sum in (\ref{eqn:partialres}) simplifies to
 
 \subsection*{Estimating the Second Order Term}
 
-Unfortunately, due to the way the bounds on the indices in the fourth sum in (\ref{eqn:partialres}) are interrelated, I haven't yet been able to simplify the fourth sum in a similar way as above. However, notice that every factor in each summand in the fourth sum is a positive quantity, so by omitting the fourth sum we can arrive at a lower bound for the second order term. Moreover, for $m = 1,2,3$, there are no collections of Schröder paths that correspond to the case covered by this fourth sum, so in these cases, this lower bound will be exact. That is, we can already arrive at an exact formula for the second order term for dimensions 3, 5 and 7. Unfortunately, as the dimension increases, the collections of Schröder paths represented by the fourth sum become the majority of collections of paths that need to be considered, so this is estimate becomes worse as we take $d \to \infty$ (see Figure (\ref{fig:estimate}).
+Unfortunately, due to the way the bounds on the indices in the fourth sum in (\ref{eqn:partialres}) are interrelated, I haven't yet been able to simplify the fourth sum in a similar way as above. However, notice that every factor in each summand in the fourth sum is a positive quantity, so by omitting the fourth sum we can arrive at a lower bound for the second order term. Moreover, for $m = 1,2,3$, there are no collections of Schröder paths that correspond to the case covered by this fourth sum, so in these cases, this lower bound will be exact. That is, we can already arrive at an exact formula for the second order term for dimensions 3, 5 and 7. Unfortunately, as the dimension increases, the collections of Schröder paths represented by the fourth sum become the majority of collections of paths that need to be considered, so this is estimate becomes worse as we take $d \to \infty$ (see Figure (\ref{fig:estimate})).
 
 \begin{figure}[h!]
 \centerline{\includegraphics[width=10cm]{estimate.eps}}\caption{\label{fig:estimate} Values of the first order term, the second order term and the estimate for $d = 3$ to 39.}
 \end{figure}
 
-Collecting (\ref{eqn:firstsimp2}), (\ref{eqn:secondsimp}), (\ref{eqn:thirdsimp}) and (\ref{eqn:lastsimp}) and simplifying, we arrive at the following result:
+Combining (\ref{eqn:firstsimp2}), (\ref{eqn:secondsimp}), (\ref{eqn:thirdsimp}) and (\ref{eqn:lastsimp}) as in (\ref{eqn:partialres}) and simplifying, we arrive at the following result:
 
 \begin{prop}\label{prop:res}
 Let $d = 3,5,7$ and $B_2^d$ be the closed $d$-dimensional Euclidean ball. Then
 \begin{equation}
-\frac{d^2}{dt^2}\text{Mag}\left(tB_2^d\right)\big\vert_{t=0} = \frac{1}{2}V_1^2+V_1\left(\frac{3(m-1)}{2m+1}\right)-\frac{2(12m^3-4m^2+6m+1)}{(2m-1)(2m+1)}.
+\frac{d^2}{dt^2}\text{Mag}\left(tB_2^d\right)\big\vert_{t=0} = \frac{1}{2}V_1^2+V_1\left(\frac{3(m-1)}{2m+1}\right)-\frac{2(12m^3+4m^2-6m-1)}{(2m-1)(2m+1)}.
 \end{equation}
 \end{prop}
 
